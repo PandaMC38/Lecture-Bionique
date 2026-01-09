@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecteur Bionique</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="toolbar">
+        <div class="group">
+            <button id="btn-pause" title="Pause/Reprise de la capture" class="icon-btn">👁️</button>
+            <button id="btn-read" title="Lire le texte (Synthèse vocale)" class="icon-btn">🔊</button>
+        </div>
+
+        <div class="group">
+            <select id="select-theme" title="Changer le thème">
+                <option value="light">☀️ Clair</option>
+                <option value="sepia">📜 Sépia</option>
+                <option value="dark">🌙 Sombre</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <select id="select-font" title="Changer la police">
+                <option value="'Segoe UI', Inter, sans-serif">Défaut</option>
+                <option value="'OpenDyslexic', sans-serif">OpenDyslexic</option>
+                <option value="'Comic Sans MS', sans-serif">Comic Sans</option>
+                <option value="'Arial', sans-serif">Arial</option>
+                <option value="'Verdana', sans-serif">Verdana</option>
+            </select>
+            <input type="range" id="range-size" min="14" max="32" value="18" title="Taille du texte">
+        </div>
+    </div>
+
     <div id="app">
         <div id="welcome-message" class="empty-state">
-            Copia du texte (CTRL+C) pour le voir apparaître ici en lecture bionique.
+            Copia du texte (CTRL+C) pour le voir apparaître ici.
         </div>
         <div id="content" class="bionic-text"></div>
     </div>
     <script src="renderer.js"></script>
 </body>
+
 </html>

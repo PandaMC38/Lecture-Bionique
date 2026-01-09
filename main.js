@@ -1,23 +1,49 @@
 const { app, BrowserWindow, clipboard } = require('electron');
 const path = require('path');
 
+// Variables
 let mainWindow;
+let splashWindow;
 let lastClipboardContent = '';
 
 function createWindow() {
+    // 1. Create Splash Sreen
+    splashWindow = new BrowserWindow({
+        width: 300,
+        height: 300,
+        transparent: false, // Set true if you handle transparency in CSS
+        frame: false,
+        alwaysOnTop: true,
+        resizable: false,
+        center: true
+    });
+    splashWindow.loadFile('splash.html');
+
+    // 2. Create Main Window (Hidden initially)
     mainWindow = new BrowserWindow({
         width: 600,
         height: 400,
-        alwaysOnTop: true, // Keep it visible for "clipboard gadget" feel
+        alwaysOnTop: true,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false // For simple prototyping/IPC
+            contextIsolation: false
         },
         title: "Lecteur Bionique",
-        autoHideMenuBar: true
+        autoHideMenuBar: true,
+        show: false // Don't show yet
     });
 
     mainWindow.loadFile('index.html');
+
+    // 3. Wait for Main Window to be ready + artificial delay for smoothness
+    mainWindow.once('ready-to-show', () => {
+        setTimeout(() => {
+            if (splashWindow && !splashWindow.isDestroyed()) {
+                splashWindow.close();
+            }
+            mainWindow.show();
+        }, 2000); // 2 seconds splash screen
+    });
 }
 
 function checkClipboard() {
@@ -32,7 +58,7 @@ function checkClipboard() {
 
 app.whenReady().then(() => {
     createWindow();
-    
+
     // Check clipboard every 1 second
     setInterval(checkClipboard, 1000);
 

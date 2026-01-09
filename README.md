@@ -27,8 +27,10 @@ Le **Lecteur Bionique** intercepte automatiquement le texte que vous copiez et l
 
 ### 🎮 Utilisation
 
-#### Méthode Rapide (Windows)
-Double-cliquez simplement sur le fichier **`Lancer Lecteur Bionique.bat`** présent dans le dossier.
+#### Méthode Rapide (Windows) - Recommandé 🌟
+Double-cliquez sur le fichier **`Lancer (Sans Console).vbs`**.
+Cela lancera l'application proprement, sans aucune fenêtre noire.
+*(Le fichier `.bat` reste disponible si vous avez besoin de voir les erreurs).*
 
 #### Méthode Ligne de Commande
 ```bash
@@ -36,10 +38,17 @@ npm start
 ```
 
 ### ✨ Comment ça marche ?
-1. Lancez l'application. Une petite fenêtre s'ouvre et reste au premier plan.
-2. Sélectionnez du texte n'importe où (Navigateur, Word, PDF...).
-3. Copiez-le (`CTRL + C`).
-4. **Magie !** Le texte apparaît instantanément dans la fenêtre, formaté pour une lecture facile.
+1. Lancez l'application. Une petite fenêtre s'ouvre.
+2. Copiez du texte (`CTRL + C`).
+3. Il apparaît instantanément en format Bionique.
+
+### 🎨 Nouvelles Fonctionnalités (V2)
+- **Barre d'outils complète** : Tout est contrôlable depuis l'interface.
+- **3 Thèmes** : Clair ☀️, Sombre 🌙, et Sépia 📜 (reposant pour les yeux).
+- **Polices au choix** : Incluant **OpenDyslexic**, Arial, Verdana, etc.
+- **Synthèse Vocale** : Cliquez sur 🔊 pour écouter le texte.
+- **Mode Pause** : Cliquez sur 👁️ pour arrêter/reprendre la capture du presse-papier.
+- **Taille du texte** : Ajustable via un curseur.
 
 ---
 
@@ -61,8 +70,9 @@ npm start
 
 ### 🎮 How to use
 
-#### Quick Start (Windows)
-Simply double-click on the **`Lancer Lecteur Bionique.bat`** file in the folder.
+#### Quick Start (Windows) - Recommended 🌟
+Double-click on the **`Lancer (Sans Console).vbs`** file.
+This launches the app cleanly, without any black console window.
 
 #### Command Line
 ```bash
@@ -70,10 +80,17 @@ npm start
 ```
 
 ### ✨ How it works
-1. Start the app. A small window will appear and stay on top.
-2. Select text anywhere (Browser, Word, PDF...).
-3. Copy it (`CTRL + C`).
-4. **Magic!** The text instantly appears in the window, formatted for easier reading.
+1. Start the app. A small window will appear.
+2. Copy any text (`CTRL + C`).
+3. It instantly appears in Bionic format.
+
+### 🎨 New Features (V2)
+- **Full Toolbar**: Control everything from the UI.
+- **3 Themes**: Light ☀️, Dark 🌙, and Sepia 📜 (easy on the eyes).
+- **Custom Fonts**: Including **OpenDyslexic**, Arial, Verdana, etc.
+- **Text-to-Speech**: Click 🔊 to listen to the text.
+- **Pause Mode**: Click 👁️ to pause/resume clipboard monitoring.
+- **Text Size**: Adjustable via slider.
 
 ---
 
